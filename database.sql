@@ -1,3 +1,6 @@
+-- Database name : prime_testing
+
+
 CREATE TABLE "gallery" (
   "id" SERIAL PRIMARY KEY,
   "url" VARCHAR,
