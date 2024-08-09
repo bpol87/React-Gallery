@@ -1,8 +1,10 @@
-import Header from "../Header/Header";
-import GalleryList from "../GalleryList/GalleryList";
+import Header from '../Header/Header.jsx';
+import GalleryList from '../GalleryList/GalleryList.jsx';
+
 
 
 function App() {
+
   return (
     <div>
       <Header />

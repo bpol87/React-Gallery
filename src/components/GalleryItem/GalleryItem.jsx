@@ -1,9 +1,24 @@
-function GalleryItem() {
+import { useState } from "react";
+
+function GalleryItem(card) {
+    const [defaultView, setDefaultView] = useState(true);
+    const galleryItemCard = defaultView ?
+        (
+            <>
+                <img src={card.url} />
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+                <button>Like</button>
+            </>
+        ) : (
+            <>
+                <p>Description</p>
+            </>
+        )
+
     return (
         <div>
-            <p>The gallery goes here!</p>
-            <img src="images/goat_small.jpg" />
-            <img src="images/goat_stache.png" />
+            {galleryItemCard}
         </div>
     )
 }
