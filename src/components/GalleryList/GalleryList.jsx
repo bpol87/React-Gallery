@@ -9,7 +9,7 @@ function GalleryList() {
         getGallery();
     }, []);
 
-    const getGallery = () => {
+    function getGallery() {
         axios({
             method: 'GET',
             url: '/api/gallery'
@@ -19,18 +19,20 @@ function GalleryList() {
                 setFullGalleryList(response.data);
             })
             .catch((err) => {
-                console.log('GET /api/gallery had an error', err)
-                alert('There was an error fetching the Gallery.')
-            })}
-
-        return (
-            <div>
-               {fullGalleryList.map((card) => {
-                console.log(card.url);
-                return <GalleryItem key={card.id} card={card}/>
-               })}
-            </div>
-        )
+                console.log('GET /api/gallery had an error', err);
+                alert('There was an error fetching the Gallery.');
+            });
     }
 
-    export default GalleryList;
+    return (
+        <div>
+            {fullGalleryList.map((card) => {
+
+                return <GalleryItem key={card.id} card={card} getGallery={getGallery} />
+            })}
+        </div>
+
+    )
+}
+
+export default GalleryList;
