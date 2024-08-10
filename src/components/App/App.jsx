@@ -6,7 +6,7 @@ import GalleryList from '../GalleryList/GalleryList.jsx';
 function App() {
 
   return (
-    <div>
+    <div id="app-shell">
       <Header />
       <GalleryList />
     </div>

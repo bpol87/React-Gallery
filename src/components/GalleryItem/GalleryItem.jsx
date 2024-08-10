@@ -31,16 +31,18 @@ function GalleryItem(card, getGallery) {
     
     const galleryItemCard = defaultView ?
         (
-            <>
+            <div id="gallery-item" onClick={flipCard}>
                 <img src={card.card.url} />
+                <div id="content">
                 <h3>{card.card.title}</h3>
-                <p>{likeCount} people have liked this</p>
                 <button onClick={addLike}>Like</button>
-            </>
+                <p>{likeCount} people have liked this</p>
+                </div>
+            </div>
         ) : (
-            <>
-                <p onClick={flipCard}>{card.card.description}</p>
-            </>
+            <div id="gallery-item-flipped" onClick={flipCard}>
+                <p>{card.card.description}</p>
+            </div>
         )
 
     
