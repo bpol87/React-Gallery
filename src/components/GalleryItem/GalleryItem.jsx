@@ -44,7 +44,6 @@ function GalleryItem(card, getGallery) {
             </div>
         ) : (
             <div id="gallery-item" data-testid="galleryItem">
-                <img id="push-pin" src="/images/pushpin.png"></img>
                 <div id="gallery-item-flipped" onClick={flipCard} data-testid="toggle">
                     <p>{card.card.description}</p>
                 </div>
