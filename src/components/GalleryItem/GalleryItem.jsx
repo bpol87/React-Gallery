@@ -38,18 +38,18 @@ function GalleryItem(card, getGallery) {
                 <img className="photo" src={card.card.url} onClick={flipCard} data-testid="toggle" />
                 <div id="content">
                     <h3>{card.card.title}</h3>
-                    <button onClick={addLike} data-testid="like"><i class="bi bi-hand-thumbs-up-fill"></i> Like</button>
+                    <button id="like-btn" onClick={addLike} data-testid="like"><i class="bi bi-hand-thumbs-up-fill"></i> Like</button>
                     <p>{likeCount} people have liked this</p>
                 </div>
             </div>
         ) : (
             <div id="gallery-item" data-testid="galleryItem">
                 <div id="gallery-item-flipped" onClick={flipCard} data-testid="toggle">
-                    <p>{card.card.description}</p>
+                    <p id="description">{card.card.description}</p>
                 </div>
                 <div id="content">
                     <h3>{card.card.title}</h3>
-                    <button onClick={addLike} data-testid="like"><i class="bi bi-hand-thumbs-up-fill"></i> Like</button>
+                    <button id="like-btn" onClick={addLike} data-testid="like"><i class="bi bi-hand-thumbs-up-fill"></i> Like</button>
                     <p>{likeCount} people have liked this</p>
                 </div>
             </div>

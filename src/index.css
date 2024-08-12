@@ -1,3 +1,10 @@
+:root {
+  --gold: goldenrod;
+  --deepgold: #b3760c;
+  --blue: #334bff;
+  --deepblue: #000F89;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -66,9 +73,13 @@ h3 {
   height: 75px;
 }
 
+#description{ 
+ padding: 15px;
+}
+
 p {
   padding-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 #push-pin {
@@ -99,4 +110,18 @@ h1 {
   font-size: 30pt;
   padding-top: 10px;
   text-wrap: wrap;
+}
+
+#like-btn {
+  border: 1px solid var(--deepblue);
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px black;
+  font-size: 12pt;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  background-image: linear-gradient(var(--blue),var(--deepblue));
+}
+
+#like-btn:active {
+  transform: translateY(2px);
 }
